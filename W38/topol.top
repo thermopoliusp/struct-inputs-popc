@@ -1,0 +1,13 @@
+#include "ff/martini_v3.0.0.itp"
+#include "ff/POPC.itp"
+#include "ff/water.itp"
+#include "ff/LiLiLi.itp"
+
+[ system ]
+POPC LLL W RANDOM MIXTURE
+
+[ molecules ]
+W 18600
+POPC 1900
+LLL 1162
+

@@ -1,0 +1,13 @@
+#include "ff/martini_v3.0.0.itp"
+#include "ff/POPC.itp"
+#include "ff/hexane.itp"
+#include "ff/LiLiLi.itp"
+
+[ system ]
+POPC LLL HEX RANDOM MIXTURE
+
+[ molecules ]
+HEX 9300
+POPC 1900
+LLL 1162
+

@@ -1,0 +1,28 @@
+#
+# Random mixture of LLL, POPC and Hexane.
+#
+# For more information, see: https://m3g.github.io/packmol/examples.shtml
+
+seed 8675309
+
+tolerance 2.0
+
+filetype pdb
+
+output from-packmol.pdb
+
+structure ./molecules/HEX.pdb
+  number 12900
+  inside box 0. 0. 0. 200. 200. 200.
+end structure
+
+structure ./molecules/POPC.pdb
+  number 700
+  inside box 0. 0. 0. 200. 200. 200.
+end structure
+
+structure ./molecules/LiLiLi.pdb
+  number 1612
+  inside box 0. 0. 0. 200. 200. 200.
+end structure
+

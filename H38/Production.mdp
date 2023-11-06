@@ -1,0 +1,53 @@
+; Production mdp options
+
+integrator               = md
+dt                       = 0.03
+nsteps                   = 17000000
+nstcomm                  = 100
+comm-grps		 = 
+
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 10000 
+nstenergy                = 100   
+nstxtcout                = 1000  
+xtc_precision            = 100
+xtc-grps                 = 
+;energygrps               = POPC LLL HEX
+
+cutoff-scheme            = Verlet
+nstlist                  = 40
+ns_type                  = grid
+pbc                      = xyz
+verlet-buffer-tolerance  = 0.005
+
+coulombtype              = reaction-field
+rcoulomb                 = 1.1
+epsilon_r                = 15	
+epsilon_rf               = 0 
+vdw_type                 = cutoff 
+vdw-modifier             = Potential-shift-verlet
+rvdw                     = 1.1 
+
+tcoupl                   = v-rescale 
+tc-grps                  = POPC_LLL HEX
+tau_t                    = 1.0  1.0 
+ref_t                    = 300 300 
+Pcoupl                   = parrinello-rahman
+Pcoupltype               = isotropic
+tau_p                    = 12.0    
+compressibility          = 3e-4
+ref_p                    = 1.0
+
+gen_vel                  = no
+gen_temp                 = 300
+gen_seed                 = 473529
+
+constraints              = none 
+constraint_algorithm     = Lincs
+continuation             = no
+lincs_order              = 4
+lincs_warnangle          = 30
+
+ld-seed                  = 8675309
